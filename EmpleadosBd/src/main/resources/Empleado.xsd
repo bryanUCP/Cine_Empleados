@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="https://t4is.uv.mx/Empleados"
+ xmlns:tns="https://t4is.uv.mx/Empleados"
+ elementFormDefault="qualified">
+ <xs:element name="RegistrarEmpleadoRequest">
+  <xs:complexType>
+   <xs:sequence>
+	<xs:element name="Nombre" type="xs:string"/>
+        <xs:element name="Apellido" type="xs:string"/>
+        <xs:element name="FechaNacimiento" type="xs:string"/>
+        <xs:element name="Direccion" type="xs:string"/>
+        <xs:element name="Telefono" type="xs:string"/>
+        <xs:element name="Sexo" type="xs:string"/>
+        <xs:element name="EstadoCivil" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ <xs:element name="RegistrarEmpleadoResponse">
+  <xs:complexType>
+   <xs:sequence>
+	<xs:element name="RNombre" type="xs:string"/>
+        <xs:element name="RApellido" type="xs:string"/>
+        <xs:element name="RFechaNacimiento" type="xs:string"/>
+        <xs:element name="RDireccion" type="xs:string"/>
+        <xs:element name="RTelefono" type="xs:string"/>
+        <xs:element name="RSexo" type="xs:string"/>
+        <xs:element name="REstadoCivil" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+<xs:element name="EmpleadosRequest"/>
+ <xs:element name="EmpleadosResponse">
+  <xs:complexType>
+   <xs:sequence>
+	<xs:element name="Empleados" maxOccurs="unbounded">
+           <xs:complexType>
+             <xs:sequence>
+               <xs:element name="id" type="xs:int"></xs:element>
+               <xs:element name="Nombre" type="xs:string"></xs:element>
+               <xs:element name="Apellido" type="xs:string"></xs:element>
+               <xs:element name="FechaNacimiento" type="xs:string"></xs:element>
+               <xs:element name="Direccion" type="xs:string"></xs:element>
+               <xs:element name="Telefono" type="xs:string"></xs:element>
+               <xs:element name="Sexo" type="xs:string"></xs:element>
+               <xs:element name="EstadoCivil" type="xs:string"></xs:element>
+             </xs:sequence>
+           </xs:complexType>
+       </xs:element>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="ModificarEmpleadoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:int"/>
+        <xs:element name="nuevoNombre" type="xs:string"/>
+        <xs:element name="nuevoApellido" type="xs:string"/>
+        <xs:element name="nuevaFechaNacimiento" type="xs:string"/>
+        <xs:element name="nuevaDireccion" type="xs:string"/>
+        <xs:element name="nuevoTelefono" type="xs:string"/>
+        <xs:element name="nuevoSexo" type="xs:string"/>
+        <xs:element name="nuevoEstadoCivil" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificarEmpleadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:int"/>
+        <xs:element name="Nombre" type="xs:string"/>
+        <xs:element name="Apellido" type="xs:string"/>
+        <xs:element name="FechaNacimiento" type="xs:string"/>
+        <xs:element name="Direccion" type="xs:string"/>
+        <xs:element name="Telefono" type="xs:string"/>
+        <xs:element name="Sexo" type="xs:string"/>
+        <xs:element name="EstadoCivil" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="EliminarEmpleadoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarEmpleadoResponse">
+    <xs:complexType>
+    <xs:sequence>
+      <xs:element name="Empleado" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:sequence>
+               <xs:element name="id" type="xs:int"></xs:element>
+               <xs:element name="Nombre" type="xs:string"></xs:element>
+               <xs:element name="Apellido" type="xs:string"></xs:element>
+               <xs:element name="FechaNacimiento" type="xs:string"></xs:element>
+               <xs:element name="Direccion" type="xs:string"></xs:element>
+               <xs:element name="Telefono" type="xs:string"></xs:element>
+               <xs:element name="Sexo" type="xs:string"></xs:element>
+               <xs:element name="EstadoCivil" type="xs:string"></xs:element>
+              </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema> 
